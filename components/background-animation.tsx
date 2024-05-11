@@ -17,11 +17,16 @@ const BackgroundAnimation: React.FC = () => {
   const [speedX2, setSpeedX2] = useState<number>(-ORIGSPEED);
   const [speedY2, setSpeedY2] = useState<number>(-ORIGSPEED);
 
+  const [isSafari, setIsSafari] = useState(false);
+
   // Reference to the container to get its dimensions for boundary checks
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Detect Safari browser
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  useEffect(() => {
+    // This code now runs only on the client-side
+    setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
+}, []);
 
   // Update positions based on speed and current position
   const updatePosition = (
