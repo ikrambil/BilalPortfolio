@@ -1,27 +1,162 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,300,400,500,600,700,1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Noto+Serif+JP&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  font-family: 'Clash Grotesk', sans-serif;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.section-headers {
+  font-family: "Noto Serif JP", serif;
+}
+
+html {
+  --line-color: #292929;
+  ;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
+
+.underline-hover-effect {
+  padding-bottom: 0.25rem; 
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #292929;
+  transition: width 0.25s ease-out;
+}
+.underline-hover-effect:hover::before {
+  width: 100%;
+}
+
+.underline-hover-effect-alt {
+  padding-bottom: 0.25rem; /* defines the space between text and underline */
+  position: relative;
+}
+
+.underline-hover-effect-alt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f6f2e5;
+  transition: width 0.25s ease-out;
+}
+.underline-hover-effect-alt:hover::before {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+html {
+  overflow: -moz-scrollbars-none; /* Old Firefox */
+}
+
+#progressBarContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(#9c86a7,#bb843d);
+  height: 100%;
+  opacity: 100%;
+}
+.cursor {
+  background-color: #111;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.introduction{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #141516;
+  svg{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: calc(100% + 300px);
+      path{
+          fill: #141516;
+      }
+  }
+  p{
+      display: flex;
+      color: white;
+      font-size: 42px;
+      align-items: center;
+      position: absolute;
+      z-index: 1;
+      span{
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: white;
+          border-radius: 50%;
+          margin-right: 10px;
+      }
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.layout {
+  min-height: 150px; /* Set a minimum height based on your needs */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
