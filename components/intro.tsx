@@ -28,7 +28,7 @@ export default function Intro() {
             transition={{ delay: ANIMATION_DELAY }}
         >
             <span className="font-normal text-4xl sm:text-7xl"><span className='font-semi font-[Borel] italic'>bilal ikram</span></span>
-            <span><span className="font-normal">I'm a{" "} software developer</span> with{" "}
+            <span><span className="font-normal">I&apos;m a{" "} software developer</span> with{" "}
             <span className="font-normal">1.5 years</span> of industry experience based in Toronto, Canada.
             </span>
       </motion.h1>
@@ -39,7 +39,7 @@ export default function Intro() {
       transition={{delay: ANIMATION_DELAY + 0.2}}>
         <Link 
         href="#contact"
-        className=' group font-medium mx-3 my-3 flex flex-row items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition underline-hover-effect'> <BsArrowRight/ > Contact me </Link>
+        className=' group font-medium mx-3 my-3 flex flex-row items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition underline-hover-effect'> <BsArrowRight/> Contact me </Link>
         <motion.a
           className="group font-medium flex items-center mx-3 my-3 gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer underline-hover-effect"
           href="/CV.pdf"

@@ -25,6 +25,11 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid message",
     };
   }
+  if (!validateString(name, 5000)) {
+    return {
+      error: "Invalid name",
+    };
+  }
 
   let data;
   try {

@@ -1,25 +1,25 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { BsArrowDown } from 'react-icons/bs';
 
 const FloatingArrow = () => {
-  const floatAnimation = {
+  const floatAnimation: Variants = {
     float: {
-      y: ["0%", "60%", "0%"], // Define the floating motion range
+      y: ["0%", "60%", "0%"], 
       transition: {
-        duration: 2,   // Duration of one cycle of motion
-        ease: "easeInOut", // Smooth the motion transitions
-        repeat: Infinity,  // Repeat the animation indefinitely
-        repeatType: "loop" // Ensure the motion loops smoothly
+        duration: 2,   
+        ease: "easeInOut", 
+        repeat: Infinity,  
+        repeatType: "loop" as "loop" 
       }
     }
   };
 
   return (
       <motion.div
-        className="text-xl" // Increase the size of the arrow icon if needed
-        variants={floatAnimation} // Pass the animation variants
-        animate="float" // Activate the float animation
+        className="text-xl" 
+        variants={floatAnimation}
+        animate="float"
       >
          <BsArrowDown />
       </motion.div>

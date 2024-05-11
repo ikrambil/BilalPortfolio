@@ -1,18 +1,13 @@
 "use client"
-import Image from 'next/image'
 import Intro from '@/components/intro'
 import SectionDivider from '@/components/section-divider'
 import About from '@/components/about'
 import Projects from '@/components/projects'
 import Skills from '@/components/skills'
 import Experience from '@/components/experience'
-import MainPage from '@/components/main-page'
-import dynamic from 'next/dynamic'
 import BackgroundAnimation from '@/components/background-animation';
-import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 import ProgressBar from '@/components/progress-bar'
-import Cursor from '@/components/cursor'
 import Preloader from '@/components/preloader'
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion';
