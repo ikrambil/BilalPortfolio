@@ -1,0 +1,13 @@
+{
+    "plugins": ["import", "unused-imports"],
+    "rules": {
+      "unused-imports/no-unused-imports": "error",
+      "import/no-unresolved": "error",
+      "import/named": "error",
+      "import/namespace": "error",
+      "import/default": "error",
+      "import/export": "error",
+      "import/no-extraneous-dependencies": "error"
+    }
+  }
+  

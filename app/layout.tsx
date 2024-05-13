@@ -1,13 +1,10 @@
 import './globals.css'
 import Header from '@/components/header'
-import Head from 'next/head';
-import { Fahkwang, Inter, Raleway } from 'next/font/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
 
-const inter = Raleway({ weight: ["400"], subsets: ["latin-ext"] })
 
 export const metadata = {
   title: 'Bilal | Personal Portfolio',
