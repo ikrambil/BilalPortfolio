@@ -7,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 
 
 export const metadata = {
-  title: 'Bilal | Personal Portfolio',
+  title: 'Bilal Ikram',
   description: 'Bilal Ikram is a Software Developer its 1.5 years of experience',
 }
 
