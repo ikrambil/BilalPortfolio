@@ -12,21 +12,12 @@ const BackgroundAnimation: React.FC = () => {
   const [speedX, setSpeedX] = useState<number>(ORIGSPEED);
   const [speedY, setSpeedY] = useState<number>(ORIGSPEED);
 
-  const [x2, setX2] = useState<number>(500);
-  const [y2, setY2] = useState<number>(500);
+  const [x2, setX2] = useState<number>(150);
+  const [y2, setY2] = useState<number>(150);
   const [speedX2, setSpeedX2] = useState<number>(-ORIGSPEED);
-  const [speedY2, setSpeedY2] = useState<number>(-ORIGSPEED);
+  const [speedY2, setSpeedY2] = useState<number>(ORIGSPEED);
 
-  const [isSafari, setIsSafari] = useState(false);
-
-  // Reference to the container to get its dimensions for boundary checks
   const containerRef = useRef<HTMLDivElement>(null);
-
-  // Detect Safari browser
-  useEffect(() => {
-    // This code now runs only on the client-side
-    setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
-}, []);
 
   // Update positions based on speed and current position
   const updatePosition = (
@@ -55,7 +46,7 @@ const BackgroundAnimation: React.FC = () => {
   };
 
   useEffect(() => {
-    // Run animations only if not Safari
+    // Run animations only if not Safari cuz Safari cannot handle them
     if (!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
       const intervalId = setInterval(() => {
         updatePosition(x, y, speedX, speedY, setX, setY, setSpeedX, setSpeedY);
@@ -68,11 +59,11 @@ const BackgroundAnimation: React.FC = () => {
   return (
     <div ref={containerRef} className="h-[95vh] w-full overflow-hidden relative -z-10 m-[2.5vh] !rounded-3xl"> 
       <motion.div
-        animate={{ x, y }} // Apply animations conditionally
-        className="circle bg-[#bb843d] absolute h-[70.25rem] w-[70.25rem] blur-[10rem] rounded-full -z-[100]"
+        animate={{ x, y }} 
+        className="circle bg-[#bb843d] absolute h-[35.25rem] w-[30.25rem] sm:h-[70.25rem] sm:w-[70.25rem] blur-[10rem] rounded-full -z-[100] -top-40 -left-40"
       />
       <motion.div
-        animate={{ x: x2, y: y2 }} // Apply animations conditionally
+        animate={{ x: x2, y: y2 }}
         className="circle bg-[#9c86a7] absolute h-[70.25rem] w-[70.25rem] blur-[10rem] rounded-full -z-[100]"
       />
     </div>

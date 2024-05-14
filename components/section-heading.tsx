@@ -34,7 +34,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ children }) => {
   return (
     <motion.h2
       ref={ref}
-      className="text-3xl sm:text-6xl mb-8 text-center font-[Borel] italic text-[#292929]"
+      className="text-6xl mb-8 text-center font-[Borel] italic text-[#292929] three-d"
       initial={{ opacity: 0, x: -100 }} 
       animate={controls}
       viewport={{once: true}}

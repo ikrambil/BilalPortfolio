@@ -58,8 +58,8 @@ export default function Preloader() {
         <motion.div variants={slideUp} initial="initial" exit="exit" className='introduction three-d'>
             {dimension.width > 0 && 
             <>
-                <motion.div className="countdown" variants={opacity} initial="initial" animate="enter" exit={{opacity:0, y:100}}>{words[index]}</motion.div>
-                <motion.div className='!font-[Borel] font-5xl countdown' initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{delay: 3}}><p className='font-[Borel]'>hello world</p></motion.div>
+                <motion.div className="countdown three-d" variants={opacity} initial="initial" animate="enter" exit={{opacity:0, y:100}}>{words[index]}</motion.div>
+                <motion.div className='!font-[Borel] font-5xl countdown three-d bg-[#292929] h-[300px]' initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{delay: 3.15}}><p className='font-[Borel]'>hello world</p></motion.div>
                 <svg>
                     <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
                 </svg>
