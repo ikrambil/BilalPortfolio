@@ -33,5 +33,5 @@ export function useIsSmallScreen() {
       };
   }, []);
 
-  return true;
+  return isSmallScreen;
 }
