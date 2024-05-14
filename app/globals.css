@@ -7,7 +7,6 @@
 
 *{
   font-family: 'Clash Grotesk', sans-serif;
-  
 }
 
 .section-headers {
@@ -23,13 +22,12 @@ html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
 }
 
-.borderBlack {
-  @apply border border-black/10;
-}
 
 .underline-hover-effect {
   padding-bottom: 0.25rem; 
   position: relative;
+  transform: translate3d(0,0,0);
+  will-change: transform;
 }
 
 .underline-hover-effect::before {
@@ -49,6 +47,8 @@ html.dark {
 .underline-hover-effect-alt {
   padding-bottom: 0.25rem; /* defines the space between text and underline */
   position: relative;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .underline-hover-effect-alt::before {
@@ -80,13 +80,13 @@ body::-webkit-scrollbar {
 
 
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
 
 
 html {
-  overflow: -moz-scrollbars-none; /* Old Firefox */
+  overflow: -moz-scrollbars-none;
 }
 
 #progressBarContainer {
@@ -107,16 +107,6 @@ html {
   height: 100%;
   opacity: 100%;
 }
-.cursor {
-  background-color: #111;
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
 
 .introduction{
   height: 100vh;
@@ -127,31 +117,33 @@ html {
   position: fixed;
   z-index: 99;
   background-color: #141516;
-  svg{
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: calc(100% + 300px);
-      path{
-          fill: #141516;
-      }
-  }
-  p{
-      display: flex;
-      color: white;
-      font-size: 42px;
-      align-items: center;
-      position: absolute;
-      z-index: 1;
-      span{
-          display: block;
-          width: 10px;
-          height: 10px;
-          background-color: white;
-          border-radius: 50%;
-          margin-right: 10px;
-      }
-  }
+}
+.countdown{
+  display: flex;
+  color: white;
+  font-size: 42px;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.introduction p span{
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.introduction svg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+}
+.introduction svg path{
+  fill: #141516;
 }
 
 .layout {
@@ -159,4 +151,14 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.three-d {
+  transform: translate3d(0,0,0);
+  will-change: transform;
+}
+
+.circle{
+  transition: transform 100ms linear;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }

@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className='!scroll-smooth'>
       <body className={`bg-[#f6f2e5] text-[#292929] relative overflow-x-hidden`}>
         <ActiveSectionContextProvider>
-        <Header/>    
+        <Header />   
         {children}
         <SpeedInsights />
         <Toaster position="top-right" />

@@ -26,6 +26,6 @@ export const validateString = (
   };
 
 
-export const ANIMATION_DELAY = 4.0;
+export const ANIMATION_DELAY = 4.15;
 
 

@@ -55,23 +55,25 @@ const BackgroundAnimation: React.FC = () => {
   };
 
   useEffect(() => {
-    if (isSafari) return; // Do not run the interval if on Safari
-    const intervalId = setInterval(() => {
-      updatePosition(x, y, speedX, speedY, setX, setY, setSpeedX, setSpeedY);
-      updatePosition(x2, y2, speedX2, speedY2, setX2, setY2, setSpeedX2, setSpeedY2);
-    }, 25);
-    return () => clearInterval(intervalId);
+    // Run animations only if not Safari
+    if (!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+      const intervalId = setInterval(() => {
+        updatePosition(x, y, speedX, speedY, setX, setY, setSpeedX, setSpeedY);
+        updatePosition(x2, y2, speedX2, speedY2, setX2, setY2, setSpeedX2, setSpeedY2);
+      }, 25);
+      return () => clearInterval(intervalId);
+    }
   }, [x, y, speedX, speedY, x2, y2, speedX2, speedY2]);
 
   return (
-    <div ref={containerRef} className="h-[95vh] w-full overflow-hidden relative -z-10 !rounded-3xl m-[2.5vh] border-16 border-[#f6f2e5]">
+    <div ref={containerRef} className="h-[95vh] w-full overflow-hidden relative -z-10 m-[2.5vh] !rounded-3xl"> 
       <motion.div
-        animate={!isSafari ? { x, y } : {} } // Apply animations conditionally
-        className="bg-[#bb843d] absolute h-[70.25rem] w-[70.25rem] blur-[10rem] rounded-full -z-[100]"
+        animate={{ x, y }} // Apply animations conditionally
+        className="circle bg-[#bb843d] absolute h-[70.25rem] w-[70.25rem] blur-[10rem] rounded-full -z-[100]"
       />
       <motion.div
-        animate={!isSafari ? { x: x2, y: y2 } : {} } // Apply animations conditionally
-        className="bg-[#9c86a7] absolute h-[70.25rem] w-[70.25rem] blur-[10rem] rounded-full -z-[100]"
+        animate={{ x: x2, y: y2 }} // Apply animations conditionally
+        className="circle bg-[#9c86a7] absolute h-[70.25rem] w-[70.25rem] blur-[10rem] rounded-full -z-[100]"
       />
     </div>
   );

@@ -101,7 +101,7 @@ export default function Experience() {
           ))}
         </VerticalTimeline>
       </section>
-      <motion.div className="relative mt-16 z-[50] -mb-4" style={{ height }}>
+      <motion.div className="relative mt-16 z-[50] -mb-4 three-d" style={{ height }}>
         <div
           className="absolute top-0 h-[1000%] sm:h-[1550%] w-[100vw] rounded-b-half bg-[#f6f2e5] z-[50] shadow-custom -translate-x-[50%]"
           style={{ boxShadow: "0px 60px 50px rgba(0, 0, 0, 0.748)" }}

@@ -22,7 +22,7 @@ export default function Intro() {
             </div>
         </div>
         <motion.h1
-            className="mb-10 mt-4 px-4 font-light !leading-[1.5] text-2xl sm:text-4xl flex flex-col"
+            className="three-d mb-10 mt-4 px-4 font-light !leading-[1.5] text-2xl sm:text-4xl flex flex-col"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: ANIMATION_DELAY }}
@@ -33,7 +33,7 @@ export default function Intro() {
             </span>
       </motion.h1>
 
-      <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg sm:text-xl font-medium w-full'
+      <motion.div className='three-d flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg sm:text-xl font-medium w-full'
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{delay: ANIMATION_DELAY + 0.2}}>
@@ -41,7 +41,7 @@ export default function Intro() {
         href="#contact"
         className=' group font-medium mx-3 my-3 flex flex-row items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition underline-hover-effect'> <BsArrowRight/> Contact me </Link>
         <motion.a
-          className="group font-medium flex items-center mx-3 my-3 gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer underline-hover-effect"
+          className="three-d group font-medium flex items-center mx-3 my-3 gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer underline-hover-effect"
           href="/CV.pdf"
           download
         >
@@ -49,7 +49,7 @@ export default function Intro() {
           <HiDownload className="group-hover:translate-y-1 transition" />
         </motion.a>
         <a
-          className="group font-medium flex items-center mx-3 my-3 gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer underline-hover-effect"
+          className="three-d group font-medium flex items-center mx-3 my-3 gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer underline-hover-effect"
           href="https://www.linkedin.com/in/bilal-ikram/"
           target="_blank"
         >
@@ -65,7 +65,7 @@ export default function Intro() {
 
       </motion.div>
       <motion.div 
-      className='flex flex-col items-center justify-center'
+      className=' three-d flex flex-col items-center justify-center'
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{delay: ANIMATION_DELAY + 0.2}}>
