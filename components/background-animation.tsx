@@ -7,6 +7,7 @@ const SVG_HEIGHT = 300; // Circle height in pixels
 const ORIGSPEED = 20; // Original speed in both X and Y directions
 
 const BackgroundAnimation: React.FC = () => {
+  /*
   const [x, setX] = useState<number>(0);
   const [y, setY] = useState<number>(0);
   const [speedX, setSpeedX] = useState<number>(ORIGSPEED);
@@ -54,7 +55,7 @@ const BackgroundAnimation: React.FC = () => {
       }, 25);
       return () => clearInterval(intervalId);
     }
-  }, [x, y, speedX, speedY, x2, y2, speedX2, speedY2]);
+  }, [x, y, speedX, speedY, x2, y2, speedX2, speedY2]); 
 
   return (
     <div ref={containerRef} className="h-[95vh] w-full overflow-hidden relative -z-10 m-[2.5vh] !rounded-3xl"> 
@@ -71,3 +72,18 @@ const BackgroundAnimation: React.FC = () => {
 };
 
 export default BackgroundAnimation;
+*/
+return (
+  <div className="h-[95vh] w-full overflow-hidden relative -z-10 m-[2.5vh] !rounded-3xl"> 
+    <div
+      className="circle bg-[#bb843d] absolute h-[35.25rem] w-[30.25rem] sm:h-[70.25rem] sm:w-[70.25rem] blur-[10rem] rounded-full -z-[100] -top-40 -left-40"
+    />
+    <div
+      className="circle bg-[#9c86a7] absolute h-[70.25rem] w-[70.25rem] blur-[10rem] rounded-full -z-[100]"
+    />
+  </div>
+);
+};
+
+export default BackgroundAnimation;
+
