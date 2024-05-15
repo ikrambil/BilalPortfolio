@@ -1,6 +1,7 @@
 import './globals.css'
 import Header from '@/components/header'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/react';
 
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />   
         {children}
         <SpeedInsights />
+        <Analytics />
         <Toaster position="top-right" />
         </ActiveSectionContextProvider>
       </body>
