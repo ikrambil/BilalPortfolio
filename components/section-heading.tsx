@@ -34,12 +34,12 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ children }) => {
   return (
     <motion.h2
       ref={ref}
-      className="text-6xl mb-8 text-center font-[Borel] italic text-[#292929] three-d"
+      className="text-6xl mb-8 text-center  italic text-[#292929] three-d"
       initial={{ opacity: 0, x: -100 }} 
       animate={controls}
       viewport={{once: true}}
     >
-      <div>{children} </div>
+      <div className="font-[Clash Grotesk]">{children} </div>
     </motion.h2>
   );
 };
