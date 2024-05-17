@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: 'Bilal Ikram',
-  description: 'Bilal Ikram is a Software Developer its 1.5 years of experience',
+  description: 'Bilal Ikram is a Software Developer its 1.5 years of industry experience, currently looking for work!',
 }
 
 export default function RootLayout({

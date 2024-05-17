@@ -8,7 +8,7 @@ import { useSectionInView } from "@/lib/hooks";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-const phrase: string = "Hello, I'm Bilal Ikram! I recently graduated from the University of Toronto with a Bachelor's degree in Computer Engineering and a minor in Artificial Intelligence. I've always enjoyed coding and love taking on new challenges while exploring new technologies. My favorite part of programming is the problem-solving aspect. There's nothing quite like the satisfaction of figuring out the solution to a problem after countless hours of throwing around print statements, and scouring Stack Overflow forums.\n When not developing, I also enjoy spending time distracting myself by playing video games, binging anime or watching F1.";
+const phrase: string = "Hello, I'm Bilal Ikram! I recently graduated from the University of Toronto with a Bachelor's degree in Computer Engineering and a minor in Artificial Intelligence. I've always enjoyed coding and love taking on new challenges while exploring new technologies. My favorite part of programming is the problem-solving aspect. There's nothing quite like the satisfaction of figuring out the solution to a problem after countless hours of throwing around print statements, and scouring Stack Overflow forums.\n When not developing, I also enjoy spending time distracting myself by playing video games or watching F1.";
 
 export default function About() {
   const { ref } = useSectionInView("About");

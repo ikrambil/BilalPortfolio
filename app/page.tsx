@@ -1,4 +1,8 @@
 "use client"
+import { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion';
+import Lenis from '@studio-freight/lenis'
+
 import Intro from '@/components/intro'
 import SectionDivider from '@/components/section-divider'
 import About from '@/components/about'
@@ -9,8 +13,6 @@ import BackgroundAnimation from '@/components/background-animation';
 import Footer from '@/components/footer'
 import ProgressBar from '@/components/progress-bar'
 import Preloader from '@/components/preloader'
-import { useState, useEffect } from 'react'
-import { AnimatePresence } from 'framer-motion';
 
 
 export default function Home() {
@@ -27,6 +29,7 @@ export default function Home() {
               window.scrollTo(0,0);
             }, 3000)
           })()},[])
+
   return (
     <main className='flex flex-col items-center px-4'>
       <AnimatePresence mode='wait'>

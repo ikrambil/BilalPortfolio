@@ -1,9 +1,15 @@
 @import url("https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,300,400,500,600,700,1&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Noto+Serif+JP&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Variable.ttf') format('truetype');
+}
+
 
 *{
   font-family: 'Clash Grotesk', sans-serif;
