@@ -28,7 +28,7 @@ const BackgroundAnimation: React.FC = () => {
     ];
     setCirclePath1(path1);
     setCirclePath2(path2);
-  })
+  }, [])
   
 
   const transitionSettings = {
